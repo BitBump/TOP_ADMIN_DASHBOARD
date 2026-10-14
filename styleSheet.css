@@ -51,8 +51,13 @@ h1, h2, h3, h4, h5, h6 {
 /*#########################################################################*/
 
 /*#-=GLOBAL_RULES=-########################################################*/
+
+html{
+    height: 100dvh;
+}
+
 body{
-    height: 100vh;
+    min-height: 100dvh;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 4fr;
