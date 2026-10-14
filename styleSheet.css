@@ -91,6 +91,8 @@ a{
     padding-top: 1.8em;
     padding-left: 3.2em;
 
+    overflow: auto;
+
     display: grid;
     grid-template-rows: 1fr 18fr;
     gap: 4rem;
