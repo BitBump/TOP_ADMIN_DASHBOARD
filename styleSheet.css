@@ -125,7 +125,7 @@ a{
 
 /*------------------------------------------------*/
 .header .search_container{
-  /*background-color:bisque;*/
+
   grid-area: 1/1/2/2;
 
   place-content: center;
@@ -181,9 +181,13 @@ a{
   align-self: start;
   margin-top: .25rem;
 }
+
+.header .user_info > *{
+  font-weight: 900;
+}
 /*------------------------------------------------*/
 .header .avatar_plus_username{
-  /*background-color:beige;*/
+  /**/
   grid-area: 1/2/2/3;
 
   grid-template-columns: 3fr 1fr 3fr;
@@ -204,15 +208,16 @@ a{
 /*username*/
 .header .avatar_plus_username > :nth-child(3){
   font-size: 2rem;
+  font-weight: 900;
   justify-self: start;
   align-self: center;
 }
 /*------------------------------------------------*/
 .header .action_buttons{
-  /*background-color: cadetblue;*/
+
   grid-area: 2/2/3/3;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(400px, 1fr));
   justify-items: center;
   align-items: center;
 }
@@ -249,7 +254,84 @@ a{
 
 /*#-=MAIN_CONTENT=-########################################################*/
 .main_content{
-    background-color: #DEE4EC;
-    grid-area: 2/2/3/3;
+  background-color: #DEE4EC;
+  grid-area: 2/2/3/3;
+
+  grid-template-columns: 5fr 2fr;
+  grid-template-rows: 1fr 4fr 1fr 4fr;
+
+  font-size: 2rem; /*Inherited by all child elements*/
 }
+
+.main_content,
+.main_content > div{
+  display: grid;
+}
+
+.main_content > h1{
+  align-self: end;
+  margin-bottom: 1rem;
+}
+
+.main_content > h1:first-of-type{
+  margin-left: 2rem;  
+}
+
+.main_content > h1:not(:first-of-type){
+  margin-left: 1rem;  
+}
+
+.main_content div:first-of-type{
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+.main_content div:not(:first-of-type){
+  margin-left: 1rem;
+  margin-right: 2.5rem;
+}
+
+.main_content .trending,
+.main_content .announcements,
+.main_content .projects > .card{
+  border-radius: 1rem;
+}
+
+/*------------------------------------------------*/
+.main_content .projects{
+  /*background-color: cadetblue;*/
+  grid-area: 2/1/5/2;
+
+  margin-bottom: 6rem;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 3.5rem;  
+}
+
+.main_content .projects > .card{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+
+  margin: 0px;
+  padding: 2rem;
+
+  border-left: 1rem solid #d45b19;
+}
+
+/*------------------------------------------------*/
+.main_content .announcements{
+  background-color:beige;
+  grid-area: 2/2/3;
+}
+
+/*------------------------------------------------*/
+.main_content .trending{
+  margin-bottom: 6rem;
+
+  background-color:bisque;
+  grid-area: 4/2/5;
+}
+
 /*#########################################################################*/
