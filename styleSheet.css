@@ -82,6 +82,10 @@ a{
 
 .sidebar .branding{
   font-size: 4.2rem;
+  padding-left: 8rem;
+  background-image: url("./icons/view-dashboard-variant.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
 }
 
 .sidebar li{
@@ -298,8 +302,11 @@ a{
 }
 
 /*------------------------------------------------*/
+.main_content > div:not(.projects), .card{
+  background-color: #FFFFFF;
+}
+
 .main_content .projects{
-  /*background-color: cadetblue;*/
   grid-area: 2/1/5/2;
 
   margin-bottom: 6rem;
@@ -310,7 +317,6 @@ a{
 }
 
 .main_content .projects > .card{
-  background-color: white;
   width: 100%;
   height: 100%;
 
@@ -322,16 +328,30 @@ a{
 
 /*------------------------------------------------*/
 .main_content .announcements{
-  background-color:beige;
   grid-area: 2/2/3;
+
+  place-content: center;
+}
+
+.main_content .announcements li:not(:last-of-type){
+  border-bottom: 3px gray solid;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+
+  width: 700px;
 }
 
 /*------------------------------------------------*/
 .main_content .trending{
   margin-bottom: 6rem;
-
-  background-color:bisque;
   grid-area: 4/2/5;
+
+  justify-content: center;
+  align-content: space-around;
+}
+
+.main_content .trending p{
+  width: 400px;
 }
 
 /*#########################################################################*/
