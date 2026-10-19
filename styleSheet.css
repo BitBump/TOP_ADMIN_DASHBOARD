@@ -75,7 +75,7 @@ a{
 /*#########################################################################*/
 
 /*#-=SIDEBAR=-#############################################################*/
-.sidebar,
+
 .sidebar .navigation a{
   color: #FFFFFF;
 }
@@ -86,6 +86,7 @@ a{
   background-image: url("./icons/view-dashboard-variant.svg");
   background-position: left center;
   background-repeat: no-repeat;
+  filter:invert(100%);
 }
 
 .sidebar li{
